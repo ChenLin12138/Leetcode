@@ -1,4 +1,4 @@
-package leetcode.backtracking;
+package leetcode.backtracking.combinations;
 
 import java.util.ArrayList;
 import java.util.List;

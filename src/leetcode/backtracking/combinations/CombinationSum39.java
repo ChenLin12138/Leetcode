@@ -1,9 +1,8 @@
-package leetcode.backtracking;
+package leetcode.backtracking.combinations;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Stack;
 
 public class CombinationSum39 {
   List<List<Integer>> result = new ArrayList<List<Integer>>();
