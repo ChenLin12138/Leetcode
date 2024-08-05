@@ -1,14 +1,11 @@
 package leetcode.backtracking.combinations;
 
-import leetcode.dp.CountNumbersWithUniqueDigits;
-
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
-public class MatchsticksToSquare {
+public class MatchsticksToSquare473 {
 
   //如果长度不能被4整出，那么肯定是不行的。
   //需要计算出一个边长，长度不能超过这个平均边长。
@@ -87,7 +84,7 @@ public class MatchsticksToSquare {
   }
 
   public static void main(String[] args) {
-    MatchsticksToSquare ins = new MatchsticksToSquare();
+    MatchsticksToSquare473 ins = new MatchsticksToSquare473();
 //    System.out.println(ins.makesquare(new int[]{1,1,2,2,2}));
 //    System.out.println(ins.makesquare(new int[]{3,3,3,3,4}));
 //    System.out.println(ins.makesquare(new int[]{2,2,2,2,2,6}));
