@@ -12,13 +12,13 @@ public class MatchsticksToSquare473 {
   //需要从大到小排列火柴，这样回溯效率高
   int avg = 0;
 
-  List<Stack<Integer>> sides = new ArrayList();
+//  List<Stack<Integer>> sides = new ArrayList();
   List<Integer> sideLength = new ArrayList<>();
   public boolean makesquare(int[] matchsticks) {
 
     //边和边长的初始化
     for(int i = 0; i < 4; i++){
-      sides.add(new Stack<>());
+//      sides.add(new Stack<>());
       sideLength.add(0);
     }
 
@@ -69,14 +69,14 @@ public class MatchsticksToSquare473 {
     for(int i = 0; i < 4; i ++){
       //该边的长度
       if(sideLength.get(i) + matchsticks[0] <= avg){
-        sides.get(i).push(matchsticks[0]);
+//        sides.get(i).push(matchsticks[0]);
         sideLength.set(i,sideLength.get(i) + matchsticks[0]);
         //回溯
         if(backTracking(Arrays.copyOfRange(matchsticks, 1, matchsticks.length))){
           return true;
         }
         //清理
-        sides.get(i).pop();
+//        sides.get(i).pop();
         sideLength.set(i,sideLength.get(i) - matchsticks[0]);
       }
     }
