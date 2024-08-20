@@ -11,7 +11,7 @@ public class AmbiguousCoordinates816 {
   //不合法的狮子过滤，整数部分不允许以0开头。
   //小数部分不允许用0结尾
   //这个题目应该是很简单的，因为无论","和"."在一个数字中只能使用一次。是我自己想复杂了
-  private static String COMMA = ",";
+  private static String COMMA = ", ";
   private static String DOT = ".";
   List<String> results = new ArrayList<>();
 
@@ -21,9 +21,9 @@ public class AmbiguousCoordinates816 {
 
     //","拆分
     //因为在最后一个数字后面去加逗号是没有意义的，所以我们到trimedString.length() - 1截止
-    for(int i = 1; i < trimedString.length() - 1; i++){
-      String left = trimedString.substring(0,i);
-      String right = trimedString.substring(i,trimedString.length());
+    for(int i = 0; i < trimedString.length(); i++){
+      String left = trimedString.substring(0,i+1);
+      String right = trimedString.substring(i+1,trimedString.length());
       String validLeft;
       String validRight;
 
@@ -33,13 +33,17 @@ public class AmbiguousCoordinates816 {
         if (left.length() < 2){
           validLeft = left;
         }else{
-          String leftIntStr = left.substring(0,j);
+          String leftIntStr = left.substring(0,j+1);
           if(!isValidInteger(leftIntStr)) continue;
 
-          String leftPointStr = left.substring(j,left.length());
+          String leftPointStr = left.substring(j+1,left.length());
           if(!isValidPoint(leftPointStr)) continue;
-          validLeft = leftIntStr + DOT + leftPointStr;
 
+          if(leftPointStr.isEmpty()){
+            validLeft = leftIntStr;
+          }else {
+            validLeft = leftIntStr + DOT + leftPointStr;
+          }
         }
 
         for(int k = 0; k < right.length(); k ++){
@@ -72,8 +76,7 @@ public class AmbiguousCoordinates816 {
   private boolean isValidInteger(String str){
     //整数部分不能为空
     if(str.isEmpty()) return false;
-    return str.charAt(0) == '0' ? false : true;
-
+    return str.charAt(0) == '0' && str.length() > 1 ? false : true;
   }
   //小数部分不以0结尾
   private boolean isValidPoint(String str){
@@ -85,5 +88,8 @@ public class AmbiguousCoordinates816 {
   public static void main(String[] args) {
     AmbiguousCoordinates816 ins = new AmbiguousCoordinates816();
     System.out.println(ins.ambiguousCoordinates("(123)"));
+//    System.out.println(ins.ambiguousCoordinates("(00011)"));
+//    System.out.println(ins.ambiguousCoordinates("(0123)"));
+//    System.out.println(ins.ambiguousCoordinates("(100)"));
   }
 }
