@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ConstructTheLexicographicallyLargestValidSequence1718 {
-    //求最大的值
+public class ConstructTheLexicographicallyLargestValidSequence1718 {    //求最大的值
     //每个2到n之间的整数，他们的距离为n
     //有一个1，然后2个n，我们事要满足开头的字符大
 //    集合里面有一些数组，他们从大到小排列。
