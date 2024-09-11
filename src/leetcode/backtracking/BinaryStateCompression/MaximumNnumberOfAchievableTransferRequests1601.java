@@ -1,4 +1,4 @@
-package leetcode.backtracking.StateCompression;
+package leetcode.backtracking.BinaryStateCompression;
 
 import java.util.Arrays;
 

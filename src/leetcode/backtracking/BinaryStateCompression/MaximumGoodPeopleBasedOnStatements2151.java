@@ -1,4 +1,4 @@
-package leetcode.backtracking.StateCompression;
+package leetcode.backtracking.BinaryStateCompression;
 
 public class MaximumGoodPeopleBasedOnStatements2151 {
 
