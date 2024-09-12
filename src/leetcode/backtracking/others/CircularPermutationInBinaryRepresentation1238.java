@@ -1,8 +1,6 @@
-package leetcode.backtracking;
+package leetcode.backtracking.others;
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class CircularPermutationInBinaryRepresentation1238 {
