@@ -44,27 +44,6 @@ public class FairDistributionOfCookies2305 {
             return;
         }
         //单层逻辑
-        //减枝1
-        //如果剩余的饼干包都不够给空手的小朋友，那么这绝对不是一个好的方案
-        //计算空手的小朋友
-//        int noCookieNo = 0;
-//        for(int i = 0; i <cookieInKidsHand.size(); i ++){
-//            if(cookieInKidsHand.get(i) == 0){
-//                noCookieNo ++;
-//            }
-//        }
-//
-//        if(cookies.length - index < noCookieNo)
-//            return;
-//
-//        //减枝2，因为之前的答案是不断的被算出来和更新的，如果现在某个小朋友分的饼干
-//        //已经比前面的计算结果还多了，那么这个方案肯定是不靠谱的
-//        for(int i = 0; i < cookieInKidsHand.size(); i++){
-//            if(cookieInKidsHand.get(i) > result){
-//                return;
-//            }
-//        }
-
         //当前这一块饼干是可以分给任意一个小朋友的
         for(int i = 0; i < k; i ++){
             //分配第一个饼干包的时候分配给谁都一样
