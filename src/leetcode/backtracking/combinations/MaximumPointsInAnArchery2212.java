@@ -1,4 +1,4 @@
-package leetcode.backtracking.segmentation;
+package leetcode.backtracking.combinations;
 
 import java.util.Arrays;
 import java.util.Stack;
