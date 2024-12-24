@@ -16,7 +16,6 @@ public class Permutations46 {
   Stack<Integer> stack = new Stack<>();
 
   public List<List<Integer>> permute(int[] nums) {
-
     backTracking(nums);
     return res;
   }
